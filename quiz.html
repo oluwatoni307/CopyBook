@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iwe Akọwé — Quiz</title>
+<link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <div id="page">
+    <div id="margin">
+      <div id="marginContent">
+        <div class="eyebrow">tier</div>
+        <div class="tier-name" id="quizTierLabel">Easy tier</div>
+        <div class="streak" id="quizStreakWrap">
+          <span class="streak-dots" id="quizStreakDots"></span>
+          <span id="quizStreakLabel"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="content">
+      <div class="app-title">
+        <span class="app-title-main">Iwe Akọwé</span>
+        <span class="app-title-sub">a copybook, by Toniking</span>
+      </div>
+
+      <nav class="mode-nav">
+        <a href="/practice.html">Practice</a>
+        <a href="/generative.html">Generative</a>
+        <a href="/patterns.html">Patterns</a>
+        <a href="/quiz.html" class="active">Quiz</a>
+      </nav>
+
+      <div class="header">
+        <button class="pill-btn" id="themeToggle">
+          <span id="themeIcon"></span>
+          <span id="themeLabel"></span>
+        </button>
+        <button class="pill-btn" id="quizSkipBtn">
+          skip
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/></svg>
+        </button>
+      </div>
+
+      <div class="card" id="card">
+        <span class="quiz-lang-tag" id="quizLangTag">python</span>
+        <div class="quiz-question" id="quizQuestion"></div>
+        <div class="quiz-options" id="quizOptions"></div>
+        <div class="quiz-explanation" id="quizExplanation" style="display:none;"></div>
+        <div class="quiz-next-row" id="quizNextRow" style="display:none;">
+          <button class="quiz-next-btn" id="quizNextBtn">next question</button>
+        </div>
+      </div>
+
+      <div class="quiz-stats-row" id="quizStatsRow"></div>
+
+      <div class="colophon">
+        <div class="rule"></div>
+        <p>300 questions across Python, Flutter, and FastAPI, split into Easy, Medium, and Hard tiers. Five correct in a row unlocks the next tier; a miss resets your streak but never knocks you back. Questions repeat once you've seen them all in a tier — skip if you don't know one.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+<script type="module" src="/src/main-quiz.js"></script>
+</body>
+</html>

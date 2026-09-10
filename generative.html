@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iwe Akọwé — Generative</title>
+<link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <div id="page">
+    <div id="margin">
+      <div id="marginContent">
+        <div class="eyebrow" id="eyebrow">Tier 1</div>
+        <div class="tier-name" id="tierName">Warm-up</div>
+        <div class="streak" id="streak">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+          <span id="streakVal">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="content">
+      <div class="app-title">
+        <span class="app-title-main">Iwe Akọwé</span>
+        <span class="app-title-sub">a copybook, by Toniking</span>
+      </div>
+
+      <nav class="mode-nav">
+        <a href="/practice.html">Practice</a>
+        <a href="/generative.html" class="active">Generative</a>
+        <a href="/patterns.html">Patterns</a>
+        <a href="/quiz.html">Quiz</a>
+      </nav>
+
+      <div class="header">
+        <label class="lang-switcher">
+          <span class="lang-label">lang</span>
+          <select id="langSelect">
+            <option value="python">Python</option>
+            <option value="dart">Dart</option>
+          </select>
+        </label>
+        <button class="pill-btn" id="themeToggle">
+          <span id="themeIcon"></span>
+          <span id="themeLabel"></span>
+        </button>
+        <button class="pill-btn" id="insightsBtn">insights</button>
+        <button class="pill-btn" id="skipBtn">
+          skip
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/></svg>
+        </button>
+      </div>
+
+      <div id="breakBar">
+        <span id="breakText"></span>
+        <button class="notice-close" id="breakDismiss">dismiss</button>
+      </div>
+
+      <div id="tipBar"></div>
+
+      <div class="prompt-box" id="promptText">Loading prompt&hellip;</div>
+
+      <div class="card" id="card">
+        <div id="chunkTag" class="chunk-tag" style="display:none;"></div>
+        <div class="text-wrap" id="textWrap"></div>
+        <textarea id="hiddenInput" class="hidden-input" spellcheck="false" autocapitalize="off" autocorrect="off"></textarea>
+      </div>
+
+      <div class="progress-row">
+        <div class="dots" id="dots"></div>
+        <div class="hint" id="hint"></div>
+      </div>
+
+      <div class="colophon">
+        <div class="rule"></div>
+        <p>Generative mode hides the code — you get an instruction instead and type the answer from memory, with the same live correctness feedback as Practice. Skip if you don't know it; you may meet it again later here or in Practice.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <div id="insightsPanel">
+    <div class="insights-card">
+      <h2>Your rough edges</h2>
+      <div class="sub">Where your hands hesitate or slip — no scores, just patterns.</div>
+      <div class="insights-section">
+        <h3>This session</h3>
+        <div id="insightsSession"></div>
+      </div>
+      <div class="insights-section">
+        <h3>All time</h3>
+        <div id="insightsLines"></div>
+      </div>
+      <div class="insights-section">
+        <h3>Slow transitions</h3>
+        <div id="insightsTransitions"></div>
+      </div>
+      <div class="insights-section">
+        <h3>Most-missed characters</h3>
+        <div id="insightsChars"></div>
+      </div>
+      <div class="insights-section">
+        <h3>Shift-hand usage</h3>
+        <div id="insightsShift"></div>
+      </div>
+      <button class="insights-close" id="insightsCloseBtn">Close</button>
+    </div>
+  </div>
+
+<script type="module" src="/src/main-generative.js"></script>
+</body>
+</html>

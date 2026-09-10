@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iwe Akọwé — Patterns</title>
+<link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <div id="page">
+    <div id="margin">
+      <div id="marginContent">
+        <div class="eyebrow">progress</div>
+        <div class="tier-name" id="progressLabel">0 / 0</div>
+      </div>
+    </div>
+
+    <div id="content">
+      <div class="app-title">
+        <span class="app-title-main">Iwe Akọwé</span>
+        <span class="app-title-sub">a copybook, by Toniking</span>
+      </div>
+
+      <nav class="mode-nav">
+        <a href="/practice.html">Practice</a>
+        <a href="/generative.html">Generative</a>
+        <a href="/patterns.html" class="active">Patterns</a>
+        <a href="/quiz.html">Quiz</a>
+      </nav>
+
+      <div class="header">
+        <button class="pill-btn" id="themeToggle">
+          <span id="themeIcon"></span>
+          <span id="themeLabel"></span>
+        </button>
+      </div>
+
+      <div class="pattern-select">
+        <div class="field">
+          <span class="field-label">category</span>
+          <select id="categorySelect"></select>
+        </div>
+        <div class="field">
+          <span class="field-label">pattern</span>
+          <select id="patternSelect"></select>
+        </div>
+      </div>
+
+      <div class="pattern-meta">
+        <div class="pattern-meta-text">
+          <div class="pattern-name">
+            <span id="patternName">—</span>
+            <span class="completed-badge" id="completedBadge" style="display:none;">&#10003; done</span>
+          </div>
+          <div class="pattern-category" id="patternCategory">—</div>
+          <div class="pattern-desc" id="patternDesc">Choose a pattern above.</div>
+        </div>
+      </div>
+
+      <div class="pattern-block-progress">
+        <div class="pattern-block-progress-fill" id="blockProgressFill"></div>
+      </div>
+
+      <div class="card" id="card">
+        <div class="text-wrap" id="textWrap"></div>
+        <textarea id="hiddenInput" class="hidden-input" spellcheck="false" autocapitalize="off" autocorrect="off"></textarea>
+      </div>
+
+      <div class="pattern-progress-row">
+        <span id="completionStatus"></span>
+        <button class="reset-btn" id="resetBtn">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+          reset
+        </button>
+      </div>
+
+      <div class="colophon">
+        <div class="rule"></div>
+        <p>Common programming patterns — OOP fundamentals, classic design patterns, concurrency, more over time. Read the description, then type the whole block in one pass. No tiers here; each pattern is either typed cleanly or not yet.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+<script type="module" src="/src/main-patterns.js"></script>
+</body>
+</html>
