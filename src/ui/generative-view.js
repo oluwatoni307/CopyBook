@@ -93,7 +93,9 @@ export function mountGenerativeView({ engine, statsStore, breakTracker, root = d
     hiddenInput.disabled = disabled;
     if (!disabled) {
       hiddenInput.value = typed;
-      requestAnimationFrame(() => hiddenInput.focus());
+      const activeElement = document.activeElement;
+      const canRestoreFocus = activeElement === document.body || activeElement === hiddenInput;
+      if (canRestoreFocus) requestAnimationFrame(() => hiddenInput.focus());
     }
   }
 

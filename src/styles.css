@@ -68,32 +68,31 @@ body {
   width: 100%;
   max-width: 900px;
   display: flex;
+  flex-direction: column;
 }
 
 #margin {
-  flex-shrink: 0;
-  width: 52px;
+  width: 100%;
   position: relative;
-  padding-right: 20px;
-  margin-right: 24px;
-  border-right: 1.5px solid var(--margin);
+  padding: 0 0 12px;
+  margin: 0 0 24px;
+  border-right: none;
+  border-bottom: 1.5px solid var(--margin);
 }
 
 #marginContent {
-  position: sticky;
-  top: 40px;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
+  position: static;
+  writing-mode: horizontal-tb;
+  transform: none;
   font-style: italic;
   font-size: 12.5px;
   color: var(--ink-faint);
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-  white-space: nowrap;
+  line-height: 1.3;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 14px;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 #marginContent .eyebrow {
   font-family: 'Source Serif 4', serif;
@@ -117,7 +116,7 @@ body {
   font-style: normal;
   color: var(--ink-faint);
 }
-#marginContent .streak svg { transform: rotate(90deg); flex-shrink: 0; }
+#marginContent .streak svg { flex-shrink: 0; }
 #marginContent .streak.active { color: var(--accent); }
 #marginContent .streak.active svg { color: var(--accent); }
 
@@ -126,7 +125,6 @@ body {
   flex-direction: row;
   gap: 4px;
   writing-mode: horizontal-tb;
-  transform: rotate(90deg);
 }
 #marginContent .streak-dot {
   width: 5px; height: 5px; border-radius: 50%;
@@ -237,6 +235,7 @@ body {
   font-size: 12px;
   cursor: pointer;
   padding: 2px 2px;
+  min-width: 76px;
 }
 
 #tipBar {
@@ -639,7 +638,7 @@ body {
 
 @media (max-width: 520px) {
   body { padding: 28px 16px 52px; }
-  #margin { width: 22px; padding-right: 10px; margin-right: 10px; }
+  #margin { padding-bottom: 10px; margin-bottom: 18px; }
   #marginContent { font-size: 11px; }
   .app-title-main { font-size: 21px; }
   .app-title-sub { font-size: 11px; }
